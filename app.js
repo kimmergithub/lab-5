@@ -13,14 +13,14 @@ For TODO item, be sure to change it to say DONE when you have successfully compl
 // TODO: Write your code here
 function sum(a,b){ //eslint-disable-line
   var sum = a + b;
-  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum;
+  var message = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
   return [sum, message];
 }
-// sum(2,4);
+sum(4,7);
+
 // TODO: Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
-potato();
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
@@ -33,11 +33,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+  var product = a * b;
+  var message = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  return [product, message];
 }
 
 // TODO: Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -54,11 +56,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // TODO: Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var addition = sum(a,sum(b,c)[0])[0];
+  var multiplication = multiply(a,multiply(b,c)[0])[0];
+  var messageAddition = a + ' and ' + b + ' and ' + c + ' sum to ' + addition + '.';
+  var messageMultiplication = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiplication + '.';
+  return [addition, multiplication, messageAddition, messageMultiplication];
 }
 
 // TODO: Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
